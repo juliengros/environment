@@ -1,0 +1,35 @@
+[user]
+    name = Julien Gros
+    email = gros.julien@gmail.com
+[alias]
+    b = branch
+    ba = branch -a
+    bd = branch -d
+    br = branch -r
+    #############
+    c = commit
+    cd = commit --amend
+    #############
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+    lgb = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+    #############
+    s = status
+[color]
+    ui = auto
+[core]
+    editor = code --wait
+    excludesFile = /Users/juliengros/.gitignore
+    pager = less
+    autocrlf = false
+    whitespace = cr-at-eol
+    ignorecase = false
+[pager]
+	log = false
+[filter "lfs"]
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+[init]
+    defaultBranch = master
